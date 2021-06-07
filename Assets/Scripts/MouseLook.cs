@@ -26,7 +26,7 @@ public class MouseLook : MonoBehaviour
         mouseX=Input.GetAxis("Mouse X")*mouseSensitivity*Time.deltaTime;
         mouseY=Input.GetAxis("Mouse Y")*mouseSensitivity*Time.deltaTime;
         upRotation-=mouseY;
-        upRotation=Mathf.Clamp(upRotation,-90f,90f);
+        upRotation=Mathf.Clamp(upRotation,10f,90f);
         transform.localRotation=Quaternion.Euler(upRotation,0f,0f);
         playerBody.Rotate(Vector3.up*mouseX);
     }

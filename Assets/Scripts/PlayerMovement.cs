@@ -32,14 +32,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1"))
         {
-            mousePressPos=Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y, 1000f));
+            mousePressPos=Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y, 100000f));
             mouse.CursorUnlock();
             mouse.enabled=false;
             isStop=true;
         }
         if(Input.GetButtonUp("Fire1"))
         {
-            mouseReleasePos=Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y, 1000f));
+            mouseReleasePos=Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y, 100000f));
             mouse.CursorLock();
             mouse.enabled=true;
             isStop=false;

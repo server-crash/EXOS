@@ -21,9 +21,8 @@ public class GameManager : MonoBehaviour
         rb=bullet.GetComponent<Rigidbody>();
         Vector3 direction=Force;
         direction.y=direction.y/5;
-        Debug.Log(direction);
         rb.useGravity=true;
-        rb.AddForce(direction*forceVal);
+        rb.AddForce(direction*forceVal/1000);
     }
     public void Delete(GameObject bullet)
     {
