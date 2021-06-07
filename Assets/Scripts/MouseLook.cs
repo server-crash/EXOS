@@ -9,13 +9,18 @@ public class MouseLook : MonoBehaviour
     public float mouseSensitivity=100f;
     public Transform playerBody;
     float upRotation=0f;
-    // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState=CursorLockMode.Locked;
     }
-
-    // Update is called once per frame
+    public void CursorUnlock()
+    {
+        Cursor.lockState=CursorLockMode.None;
+    }
+    public void CursorLock()
+    {
+        Cursor.lockState=CursorLockMode.Locked;
+    }
     void Update()
     {
         mouseX=Input.GetAxis("Mouse X")*mouseSensitivity*Time.deltaTime;
