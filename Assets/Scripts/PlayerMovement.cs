@@ -24,7 +24,8 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 mousePressPos;
     Vector3 mouseReleasePos;
-    public DragNShoot bullet;
+    public GameManager manager;
+    GameObject bullet;
 
     public CharacterController controller;
     void Update()
@@ -42,7 +43,9 @@ public class PlayerMovement : MonoBehaviour
             mouse.CursorLock();
             mouse.enabled=true;
             isStop=false;
-            bullet.Shoot(mousePressPos-mouseReleasePos);
+            bullet=manager.NewBullet();
+            manager.Shoot(mousePressPos-mouseReleasePos,bullet);
+            manager.Delete(bullet);
         }
         isGrounded=Physics.CheckSphere(groundCheck.position, groundDistance,groundMask);
         if(isGrounded&&velocity.y<0)
