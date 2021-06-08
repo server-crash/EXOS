@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     Vector3 mouseReleasePos;
     public GameManager manager;
     GameObject bullet;
+    bool isClicked;
 
     public CharacterController controller;
     void Update()
@@ -36,16 +37,23 @@ public class PlayerMovement : MonoBehaviour
             mouse.CursorUnlock();
             mouse.enabled=false;
             isStop=true;
+            isClicked=true;
+        }
+        if(isClicked)
+        {
+            mouseReleasePos=Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y, 100000f));
+            manager.CallTrajectory(mousePressPos-mouseReleasePos);
         }
         if(Input.GetButtonUp("Fire1"))
         {
-            mouseReleasePos=Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y, 100000f));
             mouse.CursorLock();
             mouse.enabled=true;
             isStop=false;
             bullet=manager.NewBullet();
             manager.Shoot(mousePressPos-mouseReleasePos,bullet);
             manager.Delete(bullet);
+            manager.RemoveTrajectory();
+            isClicked=false;
         }
         isGrounded=Physics.CheckSphere(groundCheck.position, groundDistance,groundMask);
         if(isGrounded&&velocity.y<0)
@@ -61,9 +69,9 @@ public class PlayerMovement : MonoBehaviour
         move=transform.right*x+transform.forward*z;
         if(!isStop)
         {
-            controller.Move(move*speed*Time.deltaTime);
+            controller.Move(move*speed*Time.fixedDeltaTime);
         }
-        velocity.y+=gravity*Time.deltaTime;
-        controller.Move(velocity*Time.deltaTime);
+        velocity.y+=gravity*Time.fixedDeltaTime;
+        controller.Move(velocity*Time.fixedDeltaTime);
     }
 }

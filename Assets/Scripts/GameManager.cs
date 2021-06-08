@@ -7,11 +7,11 @@ public class GameManager : MonoBehaviour
     public GameObject makeCloneOf;
     public Transform player;
     public float forceVal=2f;
-    Vector3 offset;
     Rigidbody rb;
+    public ShowTrajectory showTrajectory;
     public GameObject NewBullet()
     {
-        offset=2*player.forward;
+        Vector3 offset=2*player.forward;
         GameObject bullet;
         bullet=Instantiate(makeCloneOf,player.position+offset,Quaternion.identity);
         return bullet;
@@ -27,6 +27,18 @@ public class GameManager : MonoBehaviour
     public void Delete(GameObject bullet)
     {
         Destroy(bullet,10f);
+    }
+    public void CallTrajectory(Vector3 Force)
+    {
+        Rigidbody rb=makeCloneOf.GetComponent<Rigidbody>();
+        Vector3 offset=2*player.forward;
+        Vector3 direction=Force;
+        direction.y=direction.y/5;
+        showTrajectory.UpdateTrajectory(direction*forceVal/1000,rb.mass, player.position+offset);
+    }
+    public void RemoveTrajectory()
+    {
+        showTrajectory.HideLine();
     }
 
 }
