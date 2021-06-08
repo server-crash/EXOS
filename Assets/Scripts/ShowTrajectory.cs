@@ -10,7 +10,7 @@ public class ShowTrajectory : MonoBehaviour
     public void UpdateTrajectory(Vector3 forceVector, float mass, Vector3 startingPoint)
     {
         Vector3 velocity = (forceVector/mass)*Time.fixedDeltaTime;
-        float FlightDuration = 2*velocity.y/9.81f;
+        float FlightDuration = 5+2*velocity.y/9.81f;
         float stepTime=FlightDuration/_lineSegmentCount;
         float stepTimePassed;
         for(int i=0;i<_lineSegmentCount;i++)

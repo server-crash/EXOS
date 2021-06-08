@@ -532,7 +532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lineRenderer: {fileID: 627776743}
-  _lineSegmentCount: 20
+  _lineSegmentCount: 50
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,7 +696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5579ea3b6afd6b044bfa547400bfbf11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 5
   gravity: -9.81
   jumpHeight: 3
   groundCheck: {fileID: 327142569}
