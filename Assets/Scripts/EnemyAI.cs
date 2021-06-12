@@ -9,8 +9,9 @@ public class EnemyAI : MonoBehaviour
     public NavMeshAgent agent; 
     public float range=50f;
     public Vector3 offset= new Vector3(1,1,1);
-    public GameObject bullet,bulletalias;
-    public Rigidbody r_bodybullet;
+    public GameObject bullet;
+    GameObject bulletalias;
+    Rigidbody r_bodybullet;
     void Start()
     {
         
