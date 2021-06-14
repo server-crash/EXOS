@@ -6,6 +6,7 @@ TagManager:
   tags:
   - fps
   - AlienBullet
+  - Alien
   layers:
   - Default
   - TransparentFX
