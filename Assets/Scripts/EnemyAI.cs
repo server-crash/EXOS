@@ -26,8 +26,8 @@ public class EnemyAI : MonoBehaviour
             agent.isStopped=true;
            FaceTarget();
            RaycastHit hit;
-           Debug.DrawRay(transform.position+offset, transform.forward*1000, Color.green);
-           if(Physics.Raycast(transform.position+offset,transform.forward, out hit,lookRadius))
+           Debug.DrawRay(transform.position+offset, (target.position-(transform.position+offset))*1000, Color.green);
+           if(Physics.Raycast(transform.position+offset,(target.position-(transform.position+offset)), out hit,lookRadius))
            {
                if(cooldown>=0.5f&&(hit.transform.tag=="fps"||hit.transform.tag=="AlienBullet"))
                {
@@ -46,10 +46,10 @@ public class EnemyAI : MonoBehaviour
     }
     void Shoot()
     {
-        Vector3 offset2=transform.forward*2+offset;
+        Vector3 offset2=transform.forward*3+offset;
         bulletalias = Instantiate(bullet,transform.position+offset2,transform.rotation);
         r_bodybullet=bulletalias.GetComponent<Rigidbody>();
-        r_bodybullet.AddForce(transform.forward*1000);
+        r_bodybullet.AddForce(((target.position-(transform.position+offset)).normalized)*1000);
         Destroy(bulletalias,3f);
     }
     void FaceTarget()

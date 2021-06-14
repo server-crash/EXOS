@@ -1350,12 +1350,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 988963338249261331}
     - target: {fileID: 1170862867635871188, guid: 4c1e5df4809a76e438026905d9d656c3, type: 3}
+      propertyPath: offset.y
+      value: 5.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170862867635871188, guid: 4c1e5df4809a76e438026905d9d656c3, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1170862867635871189, guid: 4c1e5df4809a76e438026905d9d656c3, type: 3}
       propertyPath: m_Name
       value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170862867635871194, guid: 4c1e5df4809a76e438026905d9d656c3, type: 3}
+      propertyPath: m_Height
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170862867635871194, guid: 4c1e5df4809a76e438026905d9d656c3, type: 3}
+      propertyPath: m_Center.y
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 1170862867995890984, guid: 4c1e5df4809a76e438026905d9d656c3, type: 3}
       propertyPath: m_RootOrder
