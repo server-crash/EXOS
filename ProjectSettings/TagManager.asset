@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - fps
+  - AlienBullet
   layers:
   - Default
   - TransparentFX

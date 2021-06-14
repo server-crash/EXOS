@@ -34,7 +34,7 @@ public class EnemyAI : MonoBehaviour
            Debug.DrawRay(transform.position+offset, transform.forward*1000, Color.green);
            if(Physics.Raycast(transform.position+offset,transform.forward, out hit,lookRadius))
            {
-               if(cooldown>=0.5f)
+               if(cooldown>=0.5f&&(hit.transform.tag=="fps"||hit.transform.tag=="AlienBullet"))
                {
                    Debug.Log("yo");
                    Shoot();
