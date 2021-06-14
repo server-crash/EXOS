@@ -15,10 +15,6 @@ public class EnemyAI : MonoBehaviour
     public Animator animator;
     void Update()
     {
-        // agent.isStopped=false;
-        //agent.SetDestination(target.position);
-        // animator.SetBool("IsShoot",false);
-        // animator.SetBool("IsWalk",true);
         if(cooldown<=0.5f)
         {
             cooldown+=Time.deltaTime;
@@ -27,7 +23,6 @@ public class EnemyAI : MonoBehaviour
        if(distance<=lookRadius)
        {
            animator.SetBool("IsShoot",true);
-           //animator.SetBool("IsWalk",false);
             agent.isStopped=true;
            FaceTarget();
            RaycastHit hit;
@@ -45,7 +40,6 @@ public class EnemyAI : MonoBehaviour
        else
        {
            agent.isStopped=false;
-           //animator.SetBool("IsWalk",true);
            animator.SetBool("IsShoot",false);
             agent.SetDestination(target.position);
        }
