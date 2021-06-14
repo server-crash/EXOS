@@ -8,7 +8,7 @@ public class IgnoreCollision : MonoBehaviour
     {
         if(other.gameObject.tag=="AlienBullet")
         {
-            Physics.IgnoreCollision(other.collider,GetComponent<Collider>());
+            Physics.IgnoreCollision(GetComponent<Collider>(),other.collider);
         }
     }
 }

@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class KillEnemy : MonoBehaviour
 {
+    NumberOfHitsEnemy enemy;
     void OnCollisionEnter(Collision other)
     {
         Debug.Log("Kill");
         if(other.gameObject.tag=="Alien")
         {
             Debug.Log("Kill");
-            Destroy(other.gameObject,0f);
+            enemy=other.gameObject.GetComponent<NumberOfHitsEnemy>();
+            //Destroy(other.gameObject,0f);
+            enemy.UpdateNumber(other.gameObject);
+
         }
     }
 }

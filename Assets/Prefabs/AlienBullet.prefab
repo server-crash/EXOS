@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 255642770961316897}
   - component: {fileID: 123104601882347886}
   - component: {fileID: -330108985485316388}
+  - component: {fileID: 5823421337347206159}
   m_Layer: 0
   m_Name: AlienBullet
   m_TagString: AlienBullet
@@ -111,7 +112,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 0
   m_CollisionDetection: 2
 --- !u!136 &-330108985485316388
 CapsuleCollider:
@@ -127,3 +128,15 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5823421337347206159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977033446855530537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db523576aca50d1438727f2bc8c94d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

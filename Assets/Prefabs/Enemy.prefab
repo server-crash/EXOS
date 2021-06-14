@@ -222,6 +222,8 @@ GameObject:
   - component: {fileID: 957949346699311906}
   - component: {fileID: 957949346699311907}
   - component: {fileID: 957949346699311916}
+  - component: {fileID: 8571391144771596122}
+  - component: {fileID: 3542850066338410294}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Alien
@@ -318,6 +320,31 @@ MonoBehaviour:
   offset: {x: 0, y: 3.8, z: 0}
   bullet: {fileID: 977033446855530537, guid: 3f5a56e68fd50d74ab5fb392244d4223, type: 3}
   animator: {fileID: 1306253221}
+--- !u!114 &8571391144771596122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957949346699311917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8343c1dcb399204baf686f2aa38a851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3542850066338410294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957949346699311917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef870a0b24378984db62e434626c186c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberHitsFinal: 2
 --- !u!1001 &957949346359010636
 PrefabInstance:
   m_ObjectHideFlags: 0
