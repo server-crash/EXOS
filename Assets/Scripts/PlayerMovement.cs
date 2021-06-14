@@ -28,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
     GameObject bullet;
     bool isClicked;
 
+    public Animator animator;
+
     public CharacterController controller;
     void Update()
     {
@@ -67,9 +69,27 @@ public class PlayerMovement : MonoBehaviour
         x=Input.GetAxis("Horizontal");
         z=Input.GetAxis("Vertical");
         move=transform.right*x+transform.forward*z;
+        bool isX=!Mathf.Approximately(x,0f);
+        bool isZ=!Mathf.Approximately(z,0f);
+        bool isWalk=isX||isZ;
         if(!isStop)
         {
             controller.Move(move*speed*Time.fixedDeltaTime);
+        }
+        if(isWalk)
+        {
+            if(!isStop)
+            {
+                animator.SetBool("IsWalk",true);
+            }
+            else
+            {
+                animator.SetBool("IsWalk",false);
+            }
+        }
+        else
+        {
+            animator.SetBool("IsWalk",false);
         }
         velocity.y+=gravity*Time.fixedDeltaTime;
         controller.Move(velocity*Time.fixedDeltaTime);
