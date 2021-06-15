@@ -1,24 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!95 &8586008068744836186
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8928044349960868746}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c937f8edc71743645b71e40dc3cacaa1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 1
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8586008068780281018
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,6 +107,8 @@ GameObject:
   - component: {fileID: 8586008068930640079}
   - component: {fileID: 8586008068930640072}
   - component: {fileID: 8586008068930640073}
+  - component: {fileID: 851546449}
+  - component: {fileID: 851546450}
   m_Layer: 0
   m_Name: First Person Player
   m_TagString: fps
@@ -193,6 +176,32 @@ MonoBehaviour:
   manager: {fileID: 0}
   animator: {fileID: 8586008068744836186}
   controller: {fileID: 8586008068930640072}
+--- !u!136 &851546449
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8586008068930640078}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.6
+  m_Height: 3.8
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &851546450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8586008068930640078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a45e88291f771a4dbb992e71ec55fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8586008069954723660
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,6 +330,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 3000
   playerBody: {fileID: 8586008068930640079}
+--- !u!95 &8586008068744836186
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8928044349960868746}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c937f8edc71743645b71e40dc3cacaa1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 1
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &8586008070458765019
 PrefabInstance:
   m_ObjectHideFlags: 0

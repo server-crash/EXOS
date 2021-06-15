@@ -314,7 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookRadius: 15
   cooldown: 0.5
-  target: {fileID: 8586008068930640079, guid: ae9aef732ed7e164ba35254d4ec0ceae, type: 3}
+  target: {fileID: 0}
   agent: {fileID: 957949344784409837}
   range: 50
   offset: {x: 0, y: 3.8, z: 0}
