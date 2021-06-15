@@ -27,7 +27,7 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/Level-1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -48,8 +48,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 74
@@ -67,27 +65,27 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1630}
+      Script: {instanceID: 1422}
     - Class: 114
-      Script: {instanceID: 1656}
+      Script: {instanceID: 1632}
     - Class: 114
-      Script: {instanceID: 2516}
+      Script: {instanceID: 1658}
     - Class: 114
-      Script: {instanceID: 2820}
+      Script: {instanceID: 2518}
     - Class: 114
-      Script: {instanceID: 2874}
+      Script: {instanceID: 2822}
     - Class: 114
-      Script: {instanceID: 2892}
+      Script: {instanceID: 2876}
     - Class: 114
-      Script: {instanceID: 3004}
+      Script: {instanceID: 2894}
     - Class: 114
-      Script: {instanceID: 3148}
+      Script: {instanceID: 3006}
     - Class: 114
-      Script: {instanceID: 3224}
+      Script: {instanceID: 3150}
     - Class: 114
-      Script: {instanceID: 3358}
+      Script: {instanceID: 3226}
     - Class: 114
-      Script: {instanceID: 3372}
+      Script: {instanceID: 3360}
     - Class: 114
       Script: {instanceID: 3410}
     - Class: 115
@@ -116,7 +114,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 238
       Script: {instanceID: 0}
+    - Class: 1953259897
+      Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 748dd2a2a28da4e618912da5ac45684b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: StandaloneInputModule
   - hash:
       serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
@@ -539,12 +545,6 @@ ScriptsOnlyBuild:
     className: EnemyAI
   - hash:
       serializedVersion: 2
-      Hash: 748dd2a2a28da4e618912da5ac45684b
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.EventSystems
-    className: StandaloneInputModule
-  - hash:
-      serializedVersion: 2
       Hash: f7858108331b563fb41b80b729297acd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -617,5 +617,5 @@ ScriptsOnlyBuild:
     className: TextContainer
   platform: 19
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Scenes/Level-1.unity
   playerPath: C:/Users/Shubhan/Build/FPS.exe
