@@ -243,6 +243,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1342581026}
+    - target: {fileID: 957949346699311916, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
+      propertyPath: offset.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 957949346699311917, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
       propertyPath: m_Name
       value: Enemy (1)

@@ -46,15 +46,15 @@ public class EnemyAI : MonoBehaviour
     }
     void Shoot()
     {
-        Vector3 offset2=transform.forward*3+offset;
-        bulletalias = Instantiate(bullet,transform.position+offset2,transform.rotation);
+        //Vector3 offset2=transform.forward*3+offset;
+        bulletalias = Instantiate(bullet,transform.position+offset+transform.forward,transform.rotation);
         r_bodybullet=bulletalias.GetComponent<Rigidbody>();
         r_bodybullet.AddForce(((target.position-(transform.position+offset)).normalized)*1000);
         Destroy(bulletalias,3f);
     }
     void FaceTarget()
     {
-        Vector3 direction=(target.position-transform.position).normalized;
+        Vector3 direction=(target.position-transform.position-transform.forward).normalized;
         Quaternion lookRotation=Quaternion.LookRotation(new Vector3(direction.x,0,direction.z));
         transform.rotation=Quaternion.Slerp(transform.rotation,lookRotation,Time.deltaTime*15f);
     }
