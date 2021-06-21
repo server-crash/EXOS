@@ -1,4 +1,4 @@
-**Game Name** : EXOS
+**Game Name** : EXOS  
 **Team Name**       :        7tastic-6
 
 **Team Members**   :        
