@@ -95,21 +95,21 @@ public class PlayerMovement : MonoBehaviour
         {
             if(isX)
             {
-                speed=2f;
+                speed=7f;
             }
             if(isFront<0)
             {
-                speed=1.2f;
+                speed=5f;
                 isRun=false;
             }
-            else if(speed<=2.5)
+            else if(speed<=10)
             {
-                speed =speed+0.02f;
+                speed =speed+0.04f;
             }
         }
         else
         {
-            speed=1.2f;
+            speed=5f;
         }
         if(isRun&&isMove)
         {

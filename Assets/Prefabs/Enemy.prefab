@@ -312,6 +312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8041b16496c007643a4366729e0bc210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activationRadius: 40
   lookRadius: 15
   cooldown: 0.5
   target: {fileID: 0}

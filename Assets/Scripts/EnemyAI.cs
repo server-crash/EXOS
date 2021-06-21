@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
+    bool activate;
+    public float activationRadius=40f;
     public float lookRadius=10f,cooldown=0.5f ; 
     public Transform target;
     public NavMeshAgent agent; 
@@ -15,34 +17,43 @@ public class EnemyAI : MonoBehaviour
     public Animator animator;
     void Update()
     {
-        if(cooldown<=0.5f)
+        float distance=Vector3.Distance(target.position,transform.position);
+        if(distance<=activationRadius)
         {
-            cooldown+=Time.deltaTime;
+            activate=true;
+
         }
-       float distance=Vector3.Distance(target.position,transform.position);
-       if(distance<=lookRadius)
-       {
-           animator.SetBool("IsShoot",true);
-            agent.isStopped=true;
-           FaceTarget();
-           RaycastHit hit;
-           Debug.DrawRay(transform.position+offset, (target.position-(transform.position+offset))*1000, Color.green);
-           if(Physics.Raycast(transform.position+offset,(target.position-(transform.position+offset)), out hit,lookRadius))
-           {
-               if(cooldown>=0.5f&&(hit.transform.tag=="fps"||hit.transform.tag=="AlienBullet"))
-               {
-                   Debug.Log("yo");
-                   Shoot();
-                   cooldown=0;
-               }
-           }
-       }
-       else
-       {
-           agent.isStopped=false;
-           animator.SetBool("IsShoot",false);
-            agent.SetDestination(target.position);
-       }
+        if(activate)
+        {
+            if(cooldown<=0.5f)
+            {
+                cooldown+=Time.deltaTime;
+            }
+            if(distance<=lookRadius)
+            {
+                animator.SetBool("IsShoot",true);
+                agent.isStopped=true;
+                FaceTarget();
+                RaycastHit hit;
+                Debug.DrawRay(transform.position+offset, (target.position-(transform.position+offset))*1000, Color.green);
+                if(Physics.Raycast(transform.position+offset,(target.position-(transform.position+offset)), out hit,lookRadius))
+                {
+                    if(cooldown>=0.5f&&(hit.transform.tag=="fps"||hit.transform.tag=="AlienBullet"))
+                    {
+                        Debug.Log("yo");
+                        Shoot();
+                        cooldown=0;
+                    }
+                }
+            }
+            else
+            {
+                agent.isStopped=false;
+                animator.SetBool("IsShoot",false);
+                    agent.SetDestination(target.position);
+            }
+        }
+        
     }
     void Shoot()
     {
@@ -58,9 +69,4 @@ public class EnemyAI : MonoBehaviour
         Quaternion lookRotation=Quaternion.LookRotation(new Vector3(direction.x,0,direction.z));
         transform.rotation=Quaternion.Slerp(transform.rotation,lookRotation,Time.deltaTime*15f);
     }
-    // void OnDrawGizmosSelected()
-    // {
-    //     Gizmos.color=Color.red;
-    //     Gizmos.DrawWireSphere(transform.position,lookRadius);
-    // }
 }
