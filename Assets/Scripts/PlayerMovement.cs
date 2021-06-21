@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     Vector3 move;
-    public float speed=12f;
+    public float speed=1f;
 
     public float gravity=-9.81f;
     public float jumpHeight=3f;
@@ -70,26 +70,73 @@ public class PlayerMovement : MonoBehaviour
         z=Input.GetAxis("Vertical");
         move=transform.right*x+transform.forward*z;
         bool isX=!Mathf.Approximately(x,0f);
+        int isRight;
+        int isFront;
+        if(isX)
+        {
+            if(x<0) isRight=-1;
+            else isRight=1;
+        }
+        else isRight=0;
         bool isZ=!Mathf.Approximately(z,0f);
-        bool isWalk=isX||isZ;
+        bool isMove=isX||isZ;
+        if(isZ)
+        {
+            if(z>0)isFront=1;
+            else isFront=-1;
+        }
+        else isFront=0;
         if(!isStop)
         {
             controller.Move(move*speed*Time.fixedDeltaTime);
         }
-        if(isWalk)
+        bool isRun=Input.GetKey("left shift");
+        if(isRun)
         {
-            if(!isStop)
+            if(isX)
             {
-                animator.SetBool("IsWalk",true);
+                speed=2f;
             }
-            else
+            if(isFront<0)
             {
-                animator.SetBool("IsWalk",false);
+                speed=1.2f;
+                isRun=false;
+            }
+            else if(speed<=2.5)
+            {
+                speed =speed+0.02f;
             }
         }
         else
         {
-            animator.SetBool("IsWalk",false);
+            speed=1.2f;
+        }
+        if(isRun&&isMove)
+        {
+            animator.SetBool("IsRun",true);
+        }
+        else
+        {
+            animator.SetBool("IsRun",false);
+        }
+        if(isMove&&!isStop)
+        {
+            if(!isRun)
+            {
+                animator.SetInteger("IsFront",isFront);
+                animator.SetInteger("IsRight",isRight);
+            }
+            else
+            {
+                animator.SetInteger("IsFront",0);
+                animator.SetInteger("IsRight",0);
+            }
+        }
+        else
+        {
+            animator.SetInteger("IsFront",0);
+            animator.SetInteger("IsRight",0);
+            animator.SetBool("IsRun",false);
         }
         velocity.y+=gravity*Time.fixedDeltaTime;
         controller.Move(velocity*Time.fixedDeltaTime);
