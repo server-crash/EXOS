@@ -16,7 +16,7 @@ public class HealthManager : MonoBehaviour
 
     // Update is called once per frame
 
-     public void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth-=damage;
         healthBar.SetHealth(currentHealth);
