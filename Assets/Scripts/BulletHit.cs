@@ -12,5 +12,11 @@ public class BulletHit : MonoBehaviour
             Destroy(other.gameObject,0f);
             health.TakeDamage(3);
         }
+        if(other.tag=="HealthUp")
+        {
+            Debug.Log("health");
+            health.HealthPowerup();
+            Destroy(other.gameObject,0f);
+        }
     }
 }
