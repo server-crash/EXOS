@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -253,8 +253,8 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_Camera: {fileID: 519532173}
+  m_PlaneDistance: 0
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -497,6 +497,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461263829}
   m_CullTransparentMesh: 1
+--- !u!20 &519532173 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8586008070392331927, guid: ae9aef732ed7e164ba35254d4ec0ceae, type: 3}
+  m_PrefabInstance: {fileID: 62942102}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &647088930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,7 +1053,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -264, y: 185.50238}
+  m_AnchoredPosition: {x: -226, y: 140}
   m_SizeDelta: {x: 126.8064, y: 10.4867}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1782027816
@@ -1349,7 +1354,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 279, y: 195.73346}
+  m_AnchoredPosition: {x: 246, y: 146}
   m_SizeDelta: {x: 249.2058, y: 9.982}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2090001798
