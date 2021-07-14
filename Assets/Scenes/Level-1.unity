@@ -637,6 +637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 307284462}
   - component: {fileID: 307284463}
+  - component: {fileID: 307284464}
   m_Layer: 5
   m_Name: HealthbarEnemy
   m_TagString: Untagged
@@ -717,6 +718,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &307284464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307284461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b38ab53146d3fe94aa1a75c8a2e06f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 307284463}
 --- !u!1001 &424674672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -843,7 +857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1148,7 +1162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4039216, g: 0.4431373, b: 0.50980395, a: 1}
+  m_Color: {r: 1, g: 0.9964248, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1440,6 +1454,26 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &980309007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1170862867635871189, guid: 4c1e5df4809a76e438026905d9d656c3, type: 3}
+  m_PrefabInstance: {fileID: 1903898122}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &980309008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980309007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0ae10a4a46e4f40acb59a4fff261ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 200
+  currentHealth: 0
+  healthBar: {fileID: 2090001799}
 --- !u!1 &1138305723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,6 +1663,26 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1176505311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 957949346699311917, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
+  m_PrefabInstance: {fileID: 1186700323}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1176505312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176505311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0ae10a4a46e4f40acb59a4fff261ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  healthBar: {fileID: 307284464}
 --- !u!1001 &1186700323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1752,7 +1806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4039216, g: 0.4431373, b: 0.50980395, a: 1}
+  m_Color: {r: 1, g: 0.89767873, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1872,6 +1926,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511058950}
   m_CullTransparentMesh: 1
+--- !u!1 &1548650981 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 957949346699311917, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
+  m_PrefabInstance: {fileID: 187961644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1548650982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548650981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd0ae10a4a46e4f40acb59a4fff261ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  healthBar: {fileID: 1769880225}
 --- !u!1 &1769880222
 GameObject:
   m_ObjectHideFlags: 0
@@ -1882,6 +1956,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1769880223}
   - component: {fileID: 1769880224}
+  - component: {fileID: 1769880225}
   m_Layer: 5
   m_Name: HealthbarEnemy
   m_TagString: Untagged
@@ -1962,6 +2037,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1769880225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769880222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b38ab53146d3fe94aa1a75c8a2e06f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1769880224}
 --- !u!1 &1782027814
 GameObject:
   m_ObjectHideFlags: 0
@@ -2115,7 +2203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4039216, g: 0.4431373, b: 0.50980395, a: 1}
+  m_Color: {r: 0.9716981, g: 0.16325492, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2286,6 +2374,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2090001797}
   - component: {fileID: 2090001798}
+  - component: {fileID: 2090001799}
   m_Layer: 5
   m_Name: HealthbarEnemy
   m_TagString: Untagged
@@ -2366,6 +2455,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2090001799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090001796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b38ab53146d3fe94aa1a75c8a2e06f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 2090001798}
 --- !u!1 &2104914293
 GameObject:
   m_ObjectHideFlags: 0
