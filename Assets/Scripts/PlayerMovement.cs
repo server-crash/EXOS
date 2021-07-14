@@ -9,7 +9,8 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
     Vector3 move;
-    public float speed=1f;
+    public float intSpeed=7f;
+    float speed;
 
     public float gravity=-9.81f;
     public float jumpHeight=3f;
@@ -31,6 +32,10 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
 
     public CharacterController controller;
+    private void Start() 
+    {
+        speed=intSpeed;
+    }
     void Update()
     {
         if(Input.GetButtonDown("Fire1"))
@@ -95,21 +100,21 @@ public class PlayerMovement : MonoBehaviour
         {
             if(isX)
             {
-                speed=7f;
+                speed=intSpeed*1.4f;
             }
             if(isFront<0)
             {
-                speed=5f;
+                speed=intSpeed;
                 isRun=false;
             }
-            else if(speed<=10)
+            else if(speed<=2*intSpeed)
             {
                 speed =speed+0.04f;
             }
         }
         else
         {
-            speed=5f;
+            speed=intSpeed;
         }
         if(isRun&&isMove)
         {
