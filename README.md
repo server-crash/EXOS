@@ -1,5 +1,5 @@
-**Game Name** : Area-51  
-**Team Name**       :        Sector 7
+**Game Name** : EXOS  
+**Team Name**       :        7tastic-6
 
 **Team Members**   :        
 Shubhan Ravi  
