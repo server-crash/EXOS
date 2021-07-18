@@ -14,17 +14,32 @@ public class EnemyAI : MonoBehaviour
     public GameObject bullet;
     GameObject bulletalias;
     Rigidbody r_bodybullet;
+    public GameObject particle;
     public Animator animator;
+    float particleTime;
+    void Start() 
+    {
+       particle.SetActive(false);
+    }
     void Update()
     {
         float distance=Vector3.Distance(target.position,transform.position);
         if(distance<=activationRadius)
         {
             activate=true;
-
+            if(particleTime<=1.5f)
+            {
+                particle.SetActive(true);
+            }
+            else
+            {
+                particle.SetActive(false);
+                particleTime=5f;
+            }
         }
         if(activate)
         {
+            particleTime+=Time.deltaTime;
             if(cooldown<=0.5f)
             {
                 cooldown+=Time.deltaTime;
@@ -50,7 +65,7 @@ public class EnemyAI : MonoBehaviour
             {
                 agent.isStopped=false;
                 animator.SetBool("IsShoot",false);
-                    agent.SetDestination(target.position);
+                agent.SetDestination(target.position);
             }
         }
         
