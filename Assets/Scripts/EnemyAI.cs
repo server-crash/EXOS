@@ -14,12 +14,12 @@ public class EnemyAI : MonoBehaviour
     public GameObject bullet;
     GameObject bulletalias;
     Rigidbody r_bodybullet;
-    public ParticleSystem particle;
+    public GameObject particle;
     public Animator animator;
     float particleTime;
     void Start() 
     {
-    //    particle.emission.enabled=false;
+       particle.SetActive(false);
     }
     void Update()
     {
@@ -27,15 +27,15 @@ public class EnemyAI : MonoBehaviour
         if(distance<=activationRadius)
         {
             activate=true;
-            // if(particleTime<=3f)
-            // {
-            //     particle.emission.enabled=true;
-            // }
-            // else
-            // {
-            //     particle.emission.enabled=false;
-            //     particleTime=5f;
-            // }
+            if(particleTime<=1.5f)
+            {
+                particle.SetActive(true);
+            }
+            else
+            {
+                particle.SetActive(false);
+                particleTime=5f;
+            }
         }
         if(activate)
         {
