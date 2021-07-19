@@ -761,11 +761,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activationRadius: 40
-  lookRadius: 15
+  lookRadius: 25
   cooldown: 0.5
   target: {fileID: 0}
   agent: {fileID: 957949344784409837}
-  range: 50
   offset: {x: 0, y: 3.8, z: 0}
   bullet: {fileID: 977033446855530537, guid: 3f5a56e68fd50d74ab5fb392244d4223, type: 3}
   particle: {fileID: 3597302161202911824}
@@ -801,6 +800,7 @@ MonoBehaviour:
   numberHitsFinal: 4
   enemyAI: {fileID: 957949346699311916}
   blast: {fileID: 983967291000908583}
+  sphere: {fileID: 0}
 --- !u!114 &1176505312
 MonoBehaviour:
   m_ObjectHideFlags: 0
