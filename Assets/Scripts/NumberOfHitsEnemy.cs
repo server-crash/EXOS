@@ -8,6 +8,7 @@ public class NumberOfHitsEnemy : MonoBehaviour
     int numberHits=0;
     public EnemyAI enemyAI;
     public GameObject blast;
+    public SphereLock sphere;
     public void UpdateNumber(GameObject enemy)
     {
         numberHits++;
@@ -15,6 +16,7 @@ public class NumberOfHitsEnemy : MonoBehaviour
         {
             enemyAI.SetDead();
             Destroy(enemy,4f);
+            sphere.UpdateEnemyNumber();
         }
     }
 

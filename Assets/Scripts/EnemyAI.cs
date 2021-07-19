@@ -20,6 +20,7 @@ public class EnemyAI : MonoBehaviour
     float particleTime;
     bool isDead;
     public GameManager manager;
+    
     void Start() 
     {
        particle.SetActive(false);
