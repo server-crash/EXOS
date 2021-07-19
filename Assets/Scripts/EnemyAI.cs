@@ -15,8 +15,10 @@ public class EnemyAI : MonoBehaviour
     GameObject bulletalias;
     Rigidbody r_bodybullet;
     public GameObject particle;
+    public GameObject gun;
     public Animator animator;
     float particleTime;
+    bool isDead;
     void Start() 
     {
        particle.SetActive(false);
@@ -72,16 +74,24 @@ public class EnemyAI : MonoBehaviour
     }
     void Shoot()
     {
-        //Vector3 offset2=transform.forward*3+offset;
-        bulletalias = Instantiate(bullet,transform.position+offset+transform.forward,transform.rotation);
-        r_bodybullet=bulletalias.GetComponent<Rigidbody>();
-        r_bodybullet.AddForce(((target.position-(transform.position+offset)).normalized)*1000);
-        Destroy(bulletalias,3f);
+        if(isDead==false)
+        {
+            bulletalias = Instantiate(bullet,transform.position+offset+transform.forward,transform.rotation);
+            r_bodybullet=bulletalias.GetComponent<Rigidbody>();
+            r_bodybullet.AddForce(((target.position-(transform.position+offset)).normalized)*1000);
+            Destroy(bulletalias,3f);
+        }
     }
     void FaceTarget()
     {
         Vector3 direction=(target.position-transform.position-transform.forward).normalized;
         Quaternion lookRotation=Quaternion.LookRotation(new Vector3(direction.x,0,direction.z));
         transform.rotation=Quaternion.Slerp(transform.rotation,lookRotation,Time.deltaTime*15f);
+    }
+    public void SetDead()
+    {
+        isDead=true;
+        animator.SetBool("IsDead",true);
+        gun.SetActive(false);
     }
 }

@@ -6,12 +6,14 @@ public class NumberOfHitsEnemy : MonoBehaviour
 {
     public int numberHitsFinal=2;
     int numberHits=0;
+    public EnemyAI enemyAI;
     public void UpdateNumber(GameObject enemy)
     {
         numberHits++;
         if(numberHits==numberHitsFinal)
         {
-            Destroy(enemy,0f);
+            enemyAI.SetDead();
+            Destroy(enemy,4f);
         }
     }
 

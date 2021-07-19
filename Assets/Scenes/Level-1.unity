@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!29 &1
@@ -2500,3 +2501,5 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3787845247786831440, guid: 87dbe2b8b0d75f04185d0bd6d9b0099a, type: 3}
   m_PrefabInstance: {fileID: 6319567055025036186}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> bc2d0945e67c55fe0640099bfbec92ba785dfb00
