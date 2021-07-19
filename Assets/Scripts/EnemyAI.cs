@@ -19,55 +19,59 @@ public class EnemyAI : MonoBehaviour
     public Animator animator;
     float particleTime;
     bool isDead;
+    public GameManager manager;
     void Start() 
     {
        particle.SetActive(false);
     }
     void Update()
     {
-        float distance=Vector3.Distance(target.position,transform.position);
-        if(distance<=activationRadius)
+        if(true)
         {
-            activate=true;
-            if(particleTime<=1.5f)
+            float distance=Vector3.Distance(target.position,transform.position);
+            if(distance<=activationRadius)
             {
-                particle.SetActive(true);
-            }
-            else
-            {
-                particle.SetActive(false);
-                particleTime=5f;
-            }
-        }
-        if(activate)
-        {
-            particleTime+=Time.deltaTime;
-            if(cooldown<=0.5f)
-            {
-                cooldown+=Time.deltaTime;
-            }
-            if(distance<=lookRadius)
-            {
-                animator.SetBool("IsShoot",true);
-                agent.isStopped=true;
-                FaceTarget();
-                RaycastHit hit;
-                Debug.DrawRay(transform.position+offset, (target.position-(transform.position+offset))*1000, Color.green);
-                if(Physics.Raycast(transform.position+offset,(target.position-(transform.position+offset)), out hit,lookRadius))
+                activate=true;
+                if(particleTime<=1.5f)
                 {
-                    if(cooldown>=0.5f&&(hit.transform.tag=="fps"||hit.transform.tag=="AlienBullet"))
-                    {
-                        Debug.Log("yo");
-                        Shoot();
-                        cooldown=0;
-                    }
+                    particle.SetActive(true);
+                }
+                else
+                {
+                    particle.SetActive(false);
+                    particleTime=5f;
                 }
             }
-            else
+            if(activate)
             {
-                agent.isStopped=false;
-                animator.SetBool("IsShoot",false);
-                agent.SetDestination(target.position);
+                particleTime+=Time.deltaTime;
+                if(cooldown<=0.5f)
+                {
+                    cooldown+=Time.deltaTime;
+                }
+                if(distance<=lookRadius)
+                {
+                    animator.SetBool("IsShoot",true);
+                    agent.isStopped=true;
+                    FaceTarget();
+                    RaycastHit hit;
+                    Debug.DrawRay(transform.position+offset, (target.position-(transform.position+offset))*1000, Color.green);
+                    if(Physics.Raycast(transform.position+offset,(target.position-(transform.position+offset)), out hit,lookRadius))
+                    {
+                        if(cooldown>=0.5f&&(hit.transform.tag=="fps"||hit.transform.tag=="AlienBullet"))
+                        {
+                            Debug.Log("yo");
+                            Shoot();
+                            cooldown=0;
+                        }
+                    }
+                }
+                else
+                {
+                    agent.isStopped=false;
+                    animator.SetBool("IsShoot",false);
+                    agent.SetDestination(target.position);
+                }
             }
         }
         

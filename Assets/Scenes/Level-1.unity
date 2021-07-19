@@ -6707,7 +6707,7 @@ GameObject:
   - component: {fileID: 1109808006}
   - component: {fileID: 1109808010}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CanvasMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6807,6 +6807,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 513407813}
+  manager: {fileID: 424674673}
+  mouse: {fileID: 1551504711}
 --- !u!1 &1138305723
 GameObject:
   m_ObjectHideFlags: 0
@@ -11937,6 +11939,17 @@ LineRenderer:
   m_CorrespondingSourceObject: {fileID: 4801290119735586555, guid: 1cb0b297b9007174e82ffeac4686fc6d, type: 3}
   m_PrefabInstance: {fileID: 883180266}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1551504711 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8586008070392331921, guid: ae9aef732ed7e164ba35254d4ec0ceae, type: 3}
+  m_PrefabInstance: {fileID: 62942102}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81cea8f8ca23f7346b76859ba02201e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1578082920
 GameObject:
   m_ObjectHideFlags: 0

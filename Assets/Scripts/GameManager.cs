@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public float forceVal=2f;
     Rigidbody rb;
     public ShowTrajectory showTrajectory;
+    public bool GameIsPaused = false;
     public GameObject NewBullet()
     {
         Vector3 offset=2*player.forward;
@@ -39,6 +40,14 @@ public class GameManager : MonoBehaviour
     public void RemoveTrajectory()
     {
         showTrajectory.HideLine();
+    }
+    public void ResumeGame()
+    {
+        GameIsPaused = false;
+    }
+    public void PauseGame()
+    {
+        GameIsPaused = true;
     }
 
 }
