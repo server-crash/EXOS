@@ -25,7 +25,7 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
-    void Resume()
+    public void Resume()
     {
         mouse.enabled=false;
         mouse.CursorLock();
