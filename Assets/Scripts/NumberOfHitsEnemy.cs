@@ -7,6 +7,7 @@ public class NumberOfHitsEnemy : MonoBehaviour
     public int numberHitsFinal=2;
     int numberHits=0;
     public EnemyAI enemyAI;
+    public GameObject blast;
     public void UpdateNumber(GameObject enemy)
     {
         numberHits++;
