@@ -24,7 +24,7 @@ public class SphereLock : MonoBehaviour
                 sphere.SetActive(true);
             }
         }
-        if(enemyct==enemyCount)
+        if(enemyct==enemyCount+1)
         {
             sphere.SetActive(false);
         }
