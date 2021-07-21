@@ -42,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(!manager.GameIsPaused)
         {
+            animator.SetBool("IsShoot",false);
             if(Input.GetButtonDown("Fire1"))
             {
                 mousePressPos=Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y, 100000f));
@@ -61,10 +62,12 @@ public class PlayerMovement : MonoBehaviour
                 mouse.enabled=true;
                 isStop=false;
                 bullet=manager.NewBullet();
+                animator.SetBool("IsShoot",true);
                 manager.Shoot(mousePressPos-mouseReleasePos,bullet);
                 manager.Delete(bullet);
                 manager.RemoveTrajectory();
                 isClicked=false;
+                
             }
             isGrounded=Physics.CheckSphere(groundCheck.position, groundDistance,groundMask);
             if(isGrounded&&velocity.y<0)

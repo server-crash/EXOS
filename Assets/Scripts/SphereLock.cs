@@ -33,9 +33,9 @@ public class SphereLock : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other) 
     {
-        enemyGroup.SetActive(true);
         if(other.tag=="fps")
         {
+            enemyGroup.SetActive(true);
             isEnter=true;
         }
     }
