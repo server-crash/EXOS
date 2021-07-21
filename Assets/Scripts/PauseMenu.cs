@@ -11,6 +11,10 @@ public class PauseMenu : MonoBehaviour
     public GameManager manager;
     public MouseLook mouse;
     public HealthManager health;
+    void Start()
+    {
+        Time.timeScale=1f;
+    }
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
