@@ -7,8 +7,14 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject restartMenuUI;
     public GameManager manager;
     public MouseLook mouse;
+    public HealthManager health;
+    void Start()
+    {
+        Time.timeScale=1f;
+    }
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
@@ -23,6 +29,10 @@ public class PauseMenu : MonoBehaviour
             {
                 Pause();
             }
+        }
+        if(health.currentHealth<=0f)
+        {
+            Pause2();
         }
     }
     public void Resume()
@@ -43,6 +53,14 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
+    void Pause2()
+    {
+        mouse.enabled=true;
+        mouse.CursorUnlock();
+        manager.PauseGame();
+        restartMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+    }
     public void LoadMenu()
     {
         Time.timeScale = 1f;
@@ -53,5 +71,11 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Quitting game...");
         Application.Quit();
+    }
+    public void Restart()
+    {
+        //Resume();
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
