@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
-    bool activate;
+    static bool activate;
     public float activationRadius=40f;
     public float lookRadius=10f,cooldown=0.5f ; 
     public Transform target;
@@ -19,6 +19,8 @@ public class EnemyAI : MonoBehaviour
     float particleTime;
     bool isDead;
     public GameManager manager;
+    public AudioSource shootAudio;
+    public AudioSource walk;
     
     void Start() 
     {
@@ -53,6 +55,7 @@ public class EnemyAI : MonoBehaviour
                 {
                     animator.SetBool("IsShoot",true);
                     agent.isStopped=true;
+                    walk.Stop();
                     FaceTarget();
                     RaycastHit hit;
                     Debug.DrawRay(transform.position+offset, (target.position-(transform.position+offset))*1000, Color.green);
@@ -63,6 +66,8 @@ public class EnemyAI : MonoBehaviour
                             Debug.Log("yo");
                             Shoot();
                             cooldown=0;
+                            if(!shootAudio.isPlaying)
+                            shootAudio.Play();
                         }
                     }
                 }
@@ -71,6 +76,11 @@ public class EnemyAI : MonoBehaviour
                     agent.isStopped=false;
                     animator.SetBool("IsShoot",false);
                     agent.SetDestination(target.position);
+                    if(!walk.isPlaying)
+                    {
+                        walk.Play();
+                    }
+                    shootAudio.Stop();
                 }
             }
         }

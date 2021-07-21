@@ -10,6 +10,12 @@ public class GameManager : MonoBehaviour
     Rigidbody rb;
     public ShowTrajectory showTrajectory;
     public bool GameIsPaused = false;
+    public GameObject allCharacter;
+    public AudioSource playerObject;
+    void Start()
+    {
+        allCharacter.SetActive(true);
+    }
     public GameObject NewBullet()
     {
         Vector3 offset=2*player.forward;
@@ -48,6 +54,16 @@ public class GameManager : MonoBehaviour
     public void PauseGame()
     {
         GameIsPaused = true;
+    }
+    public void IsPaused()
+    {
+        allCharacter.SetActive(false);
+        playerObject.enabled=false;
+    }
+    public void IsPlay()
+    {
+        allCharacter.SetActive(true);
+        playerObject.enabled=true;
     }
 
 }

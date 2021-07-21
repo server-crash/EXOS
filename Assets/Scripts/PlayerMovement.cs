@@ -32,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
 
     public CharacterController controller;
+
+     public AudioSource walk;
     private void Start() 
     {
         speed=intSpeed;
@@ -113,10 +115,12 @@ public class PlayerMovement : MonoBehaviour
                 {
                     speed =speed+0.04f;
                 }
+                walk.pitch=1.5f;
             }
             else
             {
                 speed=intSpeed;
+                walk.pitch=1;
             }
             if(isRun&&isMove)
             {
@@ -138,13 +142,19 @@ public class PlayerMovement : MonoBehaviour
                     animator.SetInteger("IsFront",0);
                     animator.SetInteger("IsRight",0);
                 }
+                if(!walk.isPlaying)
+                {
+                    walk.Play();
+                }
             }
             else
             {
                 animator.SetInteger("IsFront",0);
                 animator.SetInteger("IsRight",0);
                 animator.SetBool("IsRun",false);
+                walk.Stop();
             }
+            
             velocity.y+=gravity*Time.fixedDeltaTime;
             controller.Move(velocity*Time.fixedDeltaTime);
         }

@@ -43,6 +43,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         manager.ResumeGame();
+        manager.IsPlay();
     }
     void Pause()
     {
@@ -52,6 +53,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        manager.IsPaused();
     }
     void Pause2()
     {
@@ -60,6 +62,7 @@ public class PauseMenu : MonoBehaviour
         manager.PauseGame();
         restartMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        manager.IsPaused();
     }
     public void LoadMenu()
     {
