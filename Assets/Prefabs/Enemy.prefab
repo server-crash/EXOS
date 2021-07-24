@@ -774,6 +774,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   shootAudio: {fileID: 5562636064954651189}
   walk: {fileID: 7502967712948039043, guid: 69259b880904c3143a8f03abc4180ba3, type: 3}
+  popUp: {fileID: 1848341035, guid: 8e5ebf6e56aa1da4382ab2c147e81a4c, type: 3}
 --- !u!114 &8571391144771596122
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -21,6 +21,8 @@ public class EnemyAI : MonoBehaviour
     public GameManager manager;
     public AudioSource shootAudio;
     public AudioSource walk;
+    public AudioSource popUp;
+    bool isPlayed;
     
     void Start() 
     {
@@ -34,11 +36,13 @@ public class EnemyAI : MonoBehaviour
             if(distance<=activationRadius)
             {
                 activate=true;
-                if(particleTime<=1.5f)
+                particle.SetActive(true);
+                if(!popUp.isPlaying&&!isPlayed)
                 {
-                    particle.SetActive(true);
+                    popUp.Play();
+                    isPlayed=true;
                 }
-                else
+                if(particleTime>1.5f)
                 {
                     particle.SetActive(false);
                     particleTime=5f;
