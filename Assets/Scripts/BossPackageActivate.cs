@@ -9,7 +9,10 @@ public class BossPackageActivate : MonoBehaviour
     public void UpdateCount()
     {
         objPackageCount++;
-        if(objPackageCount==2)
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.tag=="fps"&&objPackageCount==2)
         {
             boss.SetActive(true);
         }

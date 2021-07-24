@@ -8,6 +8,7 @@ public class SphereLock : MonoBehaviour
     public float time=0f;
     public int enemyCount;
     public GameObject enemyGroup;
+    public BossPackageActivate activator;
     int enemyct;
     float timePassed;
     bool isEnter;
@@ -29,6 +30,7 @@ public class SphereLock : MonoBehaviour
         if(enemyct==enemyCount+1)
         {
             sphere.SetActive(false);
+            activator.UpdateCount();
         }
     }
     private void OnTriggerEnter(Collider other) 
