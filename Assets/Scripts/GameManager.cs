@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     }
     public GameObject NewBullet()
     {
-        Vector3 offset=2*(player.forward)+player.right;
+        Vector3 offset=2*(player.forward);
         GameObject bullet;
         bullet=Instantiate(makeCloneOf,player.position+offset,Quaternion.identity);
         return bullet;
@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
     public void CallTrajectory(Vector3 Force)
     {
         Rigidbody rb=makeCloneOf.GetComponent<Rigidbody>();
-        Vector3 offset=2*(player.forward)+player.right;;
+        Vector3 offset=2*(player.forward);
         Vector3 direction=Force;
         direction.y=direction.y/5;
         showTrajectory.UpdateTrajectory(direction*forceVal/1000,rb.mass, player.position+offset);
