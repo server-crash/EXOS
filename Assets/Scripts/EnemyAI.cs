@@ -22,7 +22,7 @@ public class EnemyAI : MonoBehaviour
     public AudioSource shootAudio;
     public AudioSource walk;
     public AudioSource popUp;
-    bool isPlayed;
+    bool isPlayed=false;
     
     void Start() 
     {
@@ -37,11 +37,6 @@ public class EnemyAI : MonoBehaviour
             {
                 activate=true;
                 particle.SetActive(true);
-                if(!popUp.isPlaying&&!isPlayed)
-                {
-                    popUp.Play();
-                    isPlayed=true;
-                }
                 if(particleTime>1.5f)
                 {
                     particle.SetActive(false);
@@ -50,6 +45,11 @@ public class EnemyAI : MonoBehaviour
             }
             if(activate)
             {
+                if(!popUp.isPlaying&&!isPlayed)
+                {
+                    popUp.Play();
+                    isPlayed=true;
+                }
                 particleTime+=Time.deltaTime;
                 if(cooldown<=0.5f)
                 {
