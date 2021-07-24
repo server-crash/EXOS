@@ -414,6 +414,18 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 424674673}
+    - target: {fileID: 3542850065419539571, guid: 1493d3b6fa85d26409a0d1f047e7273c, type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 1979096506}
+    - target: {fileID: 3542850065534678574, guid: 1493d3b6fa85d26409a0d1f047e7273c, type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 1979096506}
+    - target: {fileID: 3542850066221299931, guid: 1493d3b6fa85d26409a0d1f047e7273c, type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 1979096506}
     - target: {fileID: 5100975326619875292, guid: 1493d3b6fa85d26409a0d1f047e7273c, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -450,6 +462,10 @@ PrefabInstance:
       propertyPath: enemyGroup
       value: 
       objectReference: {fileID: 2068588148}
+    - target: {fileID: 6441603137865437013, guid: 1493d3b6fa85d26409a0d1f047e7273c, type: 3}
+      propertyPath: m_Radius
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6441603138094037887, guid: 1493d3b6fa85d26409a0d1f047e7273c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -510,12 +526,27 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7516385395882049491, guid: 1493d3b6fa85d26409a0d1f047e7273c, type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 1979096506}
     - target: {fileID: 8478848535253414818, guid: 1493d3b6fa85d26409a0d1f047e7273c, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1493d3b6fa85d26409a0d1f047e7273c, type: 3}
+--- !u!114 &61103346 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6441603137865437012, guid: 1493d3b6fa85d26409a0d1f047e7273c, type: 3}
+  m_PrefabInstance: {fileID: 61103345}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8f7df4ab0a10d94e98f7caa46c44ae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &62942102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1521,6 +1552,7 @@ GameObject:
   - component: {fileID: 289416954}
   - component: {fileID: 289416955}
   - component: {fileID: 289416956}
+  - component: {fileID: 289416957}
   m_Layer: 0
   m_Name: BossActivate
   m_TagString: Untagged
@@ -1553,7 +1585,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 30
+  m_Radius: 40
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &289416956
 MonoBehaviour:
@@ -1568,6 +1600,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boss: {fileID: 1400304079}
+--- !u!114 &289416957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289416953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b991ea063cdf7e48a28396379c38270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &377372767
 GameObject:
   m_ObjectHideFlags: 0
@@ -2277,11 +2321,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 852011930, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 852011930, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1163777012, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
       propertyPath: cam
@@ -2343,6 +2387,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3542850066338410294, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 289416957}
     - target: {fileID: 3542850066338410294, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
       propertyPath: sphere
       value: 
@@ -2651,11 +2699,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 852011930, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 852011930, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1163777012, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
       propertyPath: cam
@@ -2721,6 +2769,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3542850066338410294, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 289416957}
     - target: {fileID: 3542850066338410294, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
       propertyPath: sphere
       value: 
@@ -3429,7 +3481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1400304080
 Transform:
   m_ObjectHideFlags: 0
@@ -3933,6 +3985,18 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxColor.r
       value: 0.6711512
       objectReference: {fileID: 0}
+    - target: {fileID: 3542850065419539571, guid: 1493d3b6fa85d26409a0d1f047e7273c, type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 1979096506}
+    - target: {fileID: 3542850065534678574, guid: 1493d3b6fa85d26409a0d1f047e7273c, type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 1979096506}
+    - target: {fileID: 3542850066221299931, guid: 1493d3b6fa85d26409a0d1f047e7273c, type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 1979096506}
     - target: {fileID: 4554319204767037085, guid: 1493d3b6fa85d26409a0d1f047e7273c, type: 3}
       propertyPath: m_LocalPosition.y
       value: -5.33
@@ -3989,6 +4053,10 @@ PrefabInstance:
       propertyPath: enemyGroup
       value: 
       objectReference: {fileID: 1770663094}
+    - target: {fileID: 6441603137865437013, guid: 1493d3b6fa85d26409a0d1f047e7273c, type: 3}
+      propertyPath: m_Radius
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6441603138094037887, guid: 1493d3b6fa85d26409a0d1f047e7273c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -4053,6 +4121,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -363.29
       objectReference: {fileID: 0}
+    - target: {fileID: 7516385395882049491, guid: 1493d3b6fa85d26409a0d1f047e7273c, type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 1979096506}
     - target: {fileID: 7986991904210580008, guid: 1493d3b6fa85d26409a0d1f047e7273c, type: 3}
       propertyPath: m_LocalPosition.y
       value: -362.44
@@ -4193,11 +4265,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 852011930, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 852011930, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1163777012, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
       propertyPath: cam
@@ -4263,6 +4335,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3542850066338410294, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 289416957}
     - target: {fileID: 3542850066338410294, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
       propertyPath: sphere
       value: 
@@ -4362,11 +4438,11 @@ PrefabInstance:
       objectReference: {fileID: 1355795979}
     - target: {fileID: 1844770225, guid: 4c1e5df4809a76e438026905d9d656c3, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1844770225, guid: 4c1e5df4809a76e438026905d9d656c3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1170862867635871188, guid: 4c1e5df4809a76e438026905d9d656c3, type: 3}
       propertyPath: gun
@@ -4457,13 +4533,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3197088531849939406, guid: 4c1e5df4809a76e438026905d9d656c3, type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 289416957}
+    - target: {fileID: 3197088531849939406, guid: 4c1e5df4809a76e438026905d9d656c3, type: 3}
       propertyPath: blast
       value: 
       objectReference: {fileID: 1979096505}
     - target: {fileID: 3197088531849939406, guid: 4c1e5df4809a76e438026905d9d656c3, type: 3}
       propertyPath: sphere
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 61103346}
     - target: {fileID: 3311526340533814702, guid: 4c1e5df4809a76e438026905d9d656c3, type: 3}
       propertyPath: target
       value: 
@@ -4759,6 +4839,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7502967712948039041, guid: 69259b880904c3143a8f03abc4180ba3, type: 3}
   m_PrefabInstance: {fileID: 7502967711656882232}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1979096506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979096505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b991ea063cdf7e48a28396379c38270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &1979096507 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 7502967712948039043, guid: 69259b880904c3143a8f03abc4180ba3, type: 3}
@@ -4773,11 +4865,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 852011930, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 852011930, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1163777012, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
       propertyPath: cam
@@ -4839,6 +4931,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3542850066338410294, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 289416957}
     - target: {fileID: 3542850066338410294, guid: 34c1982e083af5a46bf41fc7a96f9b37, type: 3}
       propertyPath: sphere
       value: 
