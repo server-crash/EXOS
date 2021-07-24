@@ -12,6 +12,7 @@ public class SphereLock : MonoBehaviour
     int enemyct;
     float timePassed;
     bool isEnter;
+    bool isUpdate;
     void Start()
     {
         sphere.SetActive(false);
@@ -30,7 +31,12 @@ public class SphereLock : MonoBehaviour
         if(enemyct==enemyCount+1)
         {
             sphere.SetActive(false);
-            activator.UpdateCount();
+            if(!isUpdate)
+            {
+                activator.UpdateCount();
+                isUpdate=true;
+            }
+            
         }
     }
     private void OnTriggerEnter(Collider other) 
