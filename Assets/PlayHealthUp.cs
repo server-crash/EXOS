@@ -8,7 +8,7 @@ public class PlayHealthUp : MonoBehaviour
     bool isPlayed;
     private void OnTriggerEnter(Collider other) 
     {
-        if(!collect.isPlaying&&other.tag=="fps"&&!isPlayed)
+        if(!collect.isPlaying&&other.tag=="fps")
         {
             collect.Play();
             isPlayed=true;
