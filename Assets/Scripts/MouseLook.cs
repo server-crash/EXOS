@@ -11,6 +11,7 @@ public class MouseLook : MonoBehaviour
     float upRotation=0f;
     void Start()
     {
+        mouseSensitivity=OptionMenu.sensitivity;
         Cursor.lockState=CursorLockMode.Locked;
     }
     public void CursorUnlock()
