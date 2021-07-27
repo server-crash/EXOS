@@ -11,6 +11,8 @@ public class PauseMenu : MonoBehaviour
     public GameManager manager;
     public MouseLook mouse;
     public HealthManager health;
+    public WinScreen winscreen;
+    public GameObject winpanelUI;
     void Start()
     {
         Time.timeScale=1f;
@@ -33,6 +35,17 @@ public class PauseMenu : MonoBehaviour
         if(health.currentHealth<=0f)
         {
             Pause2();
+        }
+
+        if(winscreen.count==12)
+        {
+            //win game screen
+             mouse.enabled=true;
+            mouse.CursorUnlock();
+            manager.PauseGame();
+            winpanelUI.SetActive(true);
+            Time.timeScale = 0f;
+            manager.IsPaused();
         }
     }
     public void Resume()
