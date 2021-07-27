@@ -65,5 +65,4 @@ public class GameManager : MonoBehaviour
         allCharacter.SetActive(true);
         playerObject.enabled=true;
     }
-
 }

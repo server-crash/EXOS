@@ -13,6 +13,7 @@ public class PauseMenu : MonoBehaviour
     public HealthManager health;
     public WinScreen winscreen;
     public GameObject winpanelUI;
+    public AudioSource mainSound;
     public AudioSource winaudio;
     void Start()
     {
@@ -42,8 +43,13 @@ public class PauseMenu : MonoBehaviour
         {
             //win game screen
             winscreen.count=0;
-            winaudio.Play(0);
-             mouse.enabled=true;
+            if(!winaudio.isPlaying)
+            {
+                mainSound.enabled=false;
+                winaudio.Play();
+                
+            }
+            mouse.enabled=true;
             mouse.CursorUnlock();
             manager.PauseGame();
             winpanelUI.SetActive(true);
