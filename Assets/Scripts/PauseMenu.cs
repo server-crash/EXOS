@@ -13,6 +13,7 @@ public class PauseMenu : MonoBehaviour
     public HealthManager health;
     public WinScreen winscreen;
     public GameObject winpanelUI;
+    public AudioSource winaudio;
     void Start()
     {
         Time.timeScale=1f;
@@ -37,9 +38,11 @@ public class PauseMenu : MonoBehaviour
             Pause2();
         }
 
-        if(winscreen.count==12)
+        if(winscreen.count==13)
         {
             //win game screen
+            winscreen.count=0;
+            winaudio.Play(0);
              mouse.enabled=true;
             mouse.CursorUnlock();
             manager.PauseGame();
