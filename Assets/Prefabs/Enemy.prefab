@@ -730,7 +730,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5810096
+  m_Radius: 0.58
   m_Height: 4
   m_Direction: 1
   m_Center: {x: 0, y: 3, z: 0.08100963}
@@ -806,6 +806,7 @@ MonoBehaviour:
   enemyAI: {fileID: 957949346699311916}
   blast: {fileID: 983967291000908583}
   sphere: {fileID: 0}
+  win: {fileID: 0}
 --- !u!114 &1176505312
 MonoBehaviour:
   m_ObjectHideFlags: 0
