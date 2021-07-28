@@ -6,7 +6,7 @@ Shubhan Ravi
 Mudit Chand Narayan  
 Prakhar Pratap Mall  
 Shivangi Singh  
-Anmol 
+Anmol  
 Afraz Jamal   
 **Design Document**: https://docs.google.com/document/d/1mvRKSrKFR_eRiB6DzdH-8M6EAdGLNWAIDZBfni2RSYs/edit#heading=h.uqlm0f6iuvgm
 
