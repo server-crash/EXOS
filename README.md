@@ -3,11 +3,11 @@
 
 **Team Members**   :        
 Shubhan Ravi  
-Mudit Chand Narayan
+Mudit Chand Narayan  
 Prakhar Pratap Mall  
-Shivangi Singh
+Shivangi Singh  
 Anmol 
-Afraz  
+Afraz Jamal   
 **Design Document**: https://docs.google.com/document/d/1mvRKSrKFR_eRiB6DzdH-8M6EAdGLNWAIDZBfni2RSYs/edit#heading=h.uqlm0f6iuvgm
 
 **Build of Final Game** : https://drive.google.com/drive/folders/1VyxOFBoQ-cRB2KVRJ1syruHLioJbp5aD?usp=sharing
