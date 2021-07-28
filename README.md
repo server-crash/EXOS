@@ -12,7 +12,7 @@ Afraz
 
 **Build of Final Game** : https://drive.google.com/drive/folders/1VyxOFBoQ-cRB2KVRJ1syruHLioJbp5aD?usp=sharing
 
-_**Work Done By Me**: Programming and implemenatation of Features (Movement, Shooting, Animations, Overall Co-ordination bewtween Game Objects, Death of Enemy, Enemy AI) , Programming of  Animations and Animators, Overall Game Design and implementation, Managing Team_
+_**Work Done By Me**: Programming and implemenatation of Features (Movement, Shooting, Animations, Overall Co-ordination between Game Objects, Death of Enemy, Enemy AI) , Programming of  Animations and Animators, Overall Game Design and implementation, Managing Team_
 
 **Video of 1st Week Submission**: https://drive.google.com/file/d/1bzLICXzTFc2ztuLpDnJqoiR-f7Ph6DBc/view?usp=sharing
 
