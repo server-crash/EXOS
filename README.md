@@ -16,6 +16,6 @@ Afraz Jamal
 
 _**Work Done By Me**: Programming and implemenatation of Features (Player Movement, Shooting, Animations, Overall Co-ordination between Game Objects, Death of Enemy, Enemy AI) , Programming of  Animations and Animators in Unity, Overall Game Design and implementation, Managing Team_
 
-**Video of 1st Week Submission**: https://drive.google.com/file/d/1bzLICXzTFc2ztuLpDnJqoiR-f7Ph6DBc/view?usp=sharing
+**Video of _1st Week_ Submission**: https://drive.google.com/file/d/1bzLICXzTFc2ztuLpDnJqoiR-f7Ph6DBc/view?usp=sharing
 
-**Github Link of 1st Week Submission** : https://github.com/server-crash/evaluation-1
+**Github Link of _1st Week_ Submission** : https://github.com/server-crash/evaluation-1
