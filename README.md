@@ -12,7 +12,7 @@ Afraz Jamal
 
 **Build of Final Game** : https://drive.google.com/drive/folders/1VyxOFBoQ-cRB2KVRJ1syruHLioJbp5aD?usp=sharing
 
-**Gameplay video** : https://drive.google.com/file/d/15jyUBEWzF5rz1X3AN7xRhmOoNia4VY4N/view?usp=sharing
+**Gameplay video** : https://drive.google.com/file/d/1cO-SU8C7UNg112MPTvkpSb5anu0JE9jx/view?usp=sharing
 
 _**Work Done By Me**: Programming and implemenatation of Features (Player Movement, Shooting, Animations, Overall Co-ordination between Game Objects, Death of Enemy, Enemy AI) , Programming of  Animations and Animators in Unity, Overall Game Design and implementation, Managing Team_
 
